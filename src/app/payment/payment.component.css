@@ -1,0 +1,43 @@
+.root{
+    display: flex;
+    top: 60px;
+    position: relative;
+    left: 10%;
+    
+}
+
+li{
+    cursor: pointer;
+}
+.payment-menu{
+    width: 20%;
+}
+
+.payment-options{
+    width: 35%;
+    left: 30%;
+    position: absolute;
+  }
+
+
+@media only screen and (max-width: 500px)
+{
+    .payment-menu{
+        width: 100%;
+    }
+    
+    .payment-options{
+        width:100%;
+        left: 0%;
+    }
+    
+    .root{
+        display: block;
+        top: 0px;
+        position: relative;
+        left: 0%;
+        width: 100%;
+    }
+
+   
+}

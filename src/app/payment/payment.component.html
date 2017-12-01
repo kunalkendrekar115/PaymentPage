@@ -1,0 +1,18 @@
+<div class="root">
+
+  <div class="payment-menu">
+ 
+         <ul class="list-group">
+           <li class="list-group-item" *ngFor="let paymode of paymodes"  [class.active]="selectedPaymode==paymode" (click)="onPaymodeSelected(paymode)">{{paymode}}</li>
+         </ul>
+    
+  </div>
+
+  <div class="payment-options" [ngSwitch]="selectedPaymode">
+    <card-payment *ngSwitchCase="'Credit / Debit Card'"></card-payment>
+    <netbanking *ngSwitchCase="'Net Banking'"></netbanking>
+    <wallets *ngSwitchCase="'Wallets'"></wallets>
+    <upi *ngSwitchCase="'UPI'"></upi>
+       
+  </div>
+</div>

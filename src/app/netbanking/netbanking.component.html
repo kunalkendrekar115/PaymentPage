@@ -1,0 +1,28 @@
+<mat-card class="card-payment-root">
+  <form #form="ngForm" class="example-form">
+
+    <mat-radio-group>
+      <div class="bankGroup" *ngFor="let bank of banks; let i = index">
+
+        <mat-radio-button *ngIf="(i<6)" [value]="bank.bankName">
+          <img src="{{bank.bankLogo}}">
+        </mat-radio-button>
+        <div *ngIf="i==2" class="break" style="width:100%;margin-top:60px;"></div>
+
+      </div>
+    </mat-radio-group>
+
+    <mat-form-field style="width:100%;">
+      <mat-select ngModel name="bank" placeholder="Select Bank">
+        <mat-option *ngFor="let bank of banks; let i = index" [value]="bank.bankName">
+          {{ bank.bankName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <div class="button">
+      <button mat-raised-button color="primary" class="form-input">Submit</button>
+    </div>
+  </form>
+</mat-card>

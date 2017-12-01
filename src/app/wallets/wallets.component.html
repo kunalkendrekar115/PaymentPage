@@ -1,0 +1,18 @@
+<mat-card class="card-payment-root">
+  <form #form="ngForm" class="example-form" (ngSubmit)="submit(form)">
+
+    <mat-radio-group ngModel name="walletType">
+      <div class="walletGroup" *ngFor="let wallet of wallets">
+
+        <mat-radio-button    [value]="wallet.walletName">
+          <img [src]="wallet.walletLogo">
+        </mat-radio-button>
+     </div>
+    </mat-radio-group>
+  
+
+    <div class="button">
+      <button mat-raised-button color="primary" class="form-input">Submit</button>
+    </div>
+  </form>
+</mat-card>

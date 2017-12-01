@@ -1,0 +1,9 @@
+img{
+    width: 60px;
+    height: 35px;
+}
+.bankGroup{
+    display: inline-flex;
+    width: 33%;
+    
+}

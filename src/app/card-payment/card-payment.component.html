@@ -1,0 +1,52 @@
+<mat-card class="card-payment-root">
+  <form #form="ngForm" class="example-form" (ngSubmit)="submit(form)">
+      <mat-radio-group hideRequiredMarker required #cardType="ngModel" ngModel name="cardType">
+        <label>Card Type </label>
+        <mat-radio-button  value="visa"><img src="assets/images/visa.png"></mat-radio-button>
+        <mat-radio-button  value="mastercard"><img src="assets/images/mastercard.png"></mat-radio-button>
+      </mat-radio-group>
+    
+    <mat-form-field hideRequiredMarker class="form-input">
+      <input ngModel required name="cardnumber" #cardnumber="ngModel" matInput placeholder="Card Number">
+       <mat-error *ngIf="form.invalid && cardnumber.errors">Invalid Card Number</mat-error>
+    </mat-form-field>
+
+    <mat-form-field hideRequiredMarker class="form-input">
+      <input ngModel name="cardholder" required #cardholder="ngModel" matInput placeholder="Card Holder Name">
+      <mat-error *ngIf="form.invalid && cardholder.errors">Invalid Card Holder</mat-error>
+      
+    </mat-form-field>
+
+    <label>Expiry</label>
+    <div class="form-input-row">
+      <mat-form-field hideRequiredMarker class="form-input-col">
+        <mat-select required ngModel name="month" #month="ngModel"  placeholder="Month">
+          <mat-option *ngFor="let month of monthNames" [value]="month">
+            {{ month }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid && month.errors">Select Month</mat-error>
+        
+      </mat-form-field>
+      <mat-form-field hideRequiredMarker class="form-input-col" style="margin-left:20px">
+        <mat-select required ngModel name="year"#year="ngModel" placeholder="Year">
+          <mat-option *ngFor="let year of yearNames" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid && year.errors">Select Year</mat-error>
+        </mat-form-field>
+    </div>
+
+
+    <mat-form-field hideRequiredMarker class="form-input">
+        <input ngModel name="CVV" required #cvv="ngModel" matInput placeholder="CVV">
+        <mat-error *ngIf="form.invalid && cvv.errors">Enter CVV</mat-error>
+        
+      </mat-form-field>
+
+    <div class="button">
+      <button mat-raised-button color="primary" class="form-input">Submit</button>
+    </div>
+  </form>
+</mat-card>

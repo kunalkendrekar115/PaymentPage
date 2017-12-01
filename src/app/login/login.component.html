@@ -1,0 +1,19 @@
+<mat-card>
+    <form #form="ngForm" class="example-form" (ngSubmit)="submit(form)">
+        <mat-form-field class="form-input">
+            <input ngModel name="username" #userName="ngModel" matInput placeholder="User Name" required minlength="5">
+            <mat-error *ngIf="form.invalid && userName.errors">Invalid Username</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-input">
+            <input ngModel name="password" #password="ngModel" matInput placeholder="Password" required minlength="5">
+            <mat-error *ngIf="form.invalid && password.errors">Invalid Password</mat-error>
+
+        </mat-form-field>
+
+        <mat-checkbox class="form-input">Remember Me</mat-checkbox>
+        
+        <div class="button">
+            <button mat-raised-button color="primary" class="form-input">Submit</button>
+        </div>
+    </form>
+</mat-card>

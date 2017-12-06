@@ -1,0 +1,29 @@
+mat-grid-list{
+
+    width: 50%;
+    margin-left: 8%;
+}
+
+.orderSummery{
+   width: 30%;
+   margin-left:auto; 
+   margin-right:25px;
+   margin-top: 16px;
+   position: fixed;
+   top:6em;
+   right:2em;
+  
+}
+
+@media (max-width: 600px)
+{
+    mat-grid-list{
+            width: 90%;
+            margin: auto;
+        }
+
+        .orderSummery{
+           
+            display: none
+        }
+}

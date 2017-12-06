@@ -2,8 +2,8 @@
   <form #form="ngForm" class="example-form" (ngSubmit)="submit(form)">
       <mat-radio-group hideRequiredMarker required #cardType="ngModel" ngModel name="cardType">
         <label>Card Type </label>
-        <mat-radio-button  value="visa"><img src="assets/images/visa.png"></mat-radio-button>
-        <mat-radio-button  value="mastercard"><img src="assets/images/mastercard.png"></mat-radio-button>
+        <mat-radio-button class="cardType" value="visa"><img src="assets/images/visa.png"></mat-radio-button>
+        <mat-radio-button class="cardType" value="mastercard"><img src="assets/images/mastercard.png"></mat-radio-button>
       </mat-radio-group>
     
     <mat-form-field hideRequiredMarker class="form-input">

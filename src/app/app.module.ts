@@ -15,6 +15,12 @@ import { DebitCardComponent } from './debit-card/debit-card.component';
 import { NetbankingComponent } from './netbanking/netbanking.component';
 import { WalletsComponent } from './wallets/wallets.component';
 import { UpiComponent } from './upi/upi.component';
+import { CartComponent } from './cart/cart.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import { UpiComponent } from './upi/upi.component';
     DebitCardComponent,
     NetbankingComponent,
     WalletsComponent,
-    UpiComponent
+    UpiComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,14 @@ import { UpiComponent } from './upi/upi.component';
     MatInputModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatGridListModule,
+
+    RouterModule.forRoot([
+      {path: 'payment', component: PaymentComponent},
+      { path: '', component: CartComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

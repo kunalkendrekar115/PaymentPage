@@ -4,6 +4,38 @@ img{
 }
 .bankGroup{
     display: inline-flex;
-    width: 33%;
-    
+    width: 32%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.box{
+
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid lightgrey;
+}
+mat-radio-button
+{
+    margin-left: 0px;
+}
+
+@media (max-width: 600px)
+{
+   
+    .box{
+        
+            padding: 5px;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            width: 90%;
+            border: 1px solid lightgrey;
+        }
+
+        img{
+            width: 40px;
+            height: 25px;
+        }
 }

@@ -13,8 +13,8 @@
     width: 40%;
     outline: 0;
 }
-mat-radio-button{
-    margin-left: 20px;
+.cardType{
+    margin-left: 16px;
 }
 .form-input-row{
     width: 100%;

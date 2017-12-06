@@ -1,6 +1,6 @@
 <mat-toolbar class="fixed-header" color="primary"></mat-toolbar>
 
-<div style="display:flex;width:100%;position:relative;top:80px">
+<div style="display:flex;width:100%;position:relative;top:80px" [class.mobileMarginBottom]="cartProducts.length>0">
   <mat-grid-list cols={{col}} rowHeight="430px" (window:resize)="onResize($event)">
     <mat-grid-tile style="width:100%;" *ngFor="let product of products">
 
@@ -26,6 +26,7 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+
   <div class="orderSummery" *ngIf="cartProducts.length>0"> 
     <mat-card>
       <h4 style="text-align:center">Order Summery</h4>
@@ -56,4 +57,7 @@
     </mat-card>
   </div>
 
+  <div class="mobileBottom" *ngIf="cartProducts.length>0">
+    <button routerLink="/payment" mat-raised-button color="primary" class="form-input"  style="width:100%;">Proceed to Checkout</button>  
+  </div>
 </div>

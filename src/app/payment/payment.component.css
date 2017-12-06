@@ -3,7 +3,7 @@
     top: 60px;
     position: relative;
     left: 10%;
-    
+   
 }
 
 li{
@@ -11,12 +11,15 @@ li{
 }
 .payment-menu{
     width: 20%;
+    padding: 20px;
+    
 }
 
 .payment-options{
     width: 35%;
     left: 30%;
     position: absolute;
+    padding: 20px;
   }
 
 

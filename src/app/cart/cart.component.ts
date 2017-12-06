@@ -67,14 +67,4 @@ export class CartComponent {
     console.log(JSON.stringify(this.cartProducts))
   }
 
-  getTotalPrice() {
-
-    let total:number=0;
-    this.cartProducts.forEach(product=>{
-
-        total=total+(product.selectedQty* parseInt(product.price))
-    })
-
-    return total;
-  }
 }

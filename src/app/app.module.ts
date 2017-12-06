@@ -20,6 +20,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { OrderSummeryComponent } from './order-summery/order-summery.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { RouterModule } from '@angular/router';
     WalletsComponent,
     UpiComponent,
     CartComponent,
+    OrderSummeryComponent,
   ],
   imports: [
     BrowserModule,

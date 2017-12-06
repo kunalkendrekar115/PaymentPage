@@ -1,0 +1,28 @@
+.orderSummery{
+    width: 30%;
+    margin-left:auto; 
+    position: fixed;
+    top:90px;
+    right: 20px;
+ }
+ .mobileBottom
+ {
+   display: none;
+}
+
+@media (max-width: 600px)
+{
+         .orderSummery{
+            
+             display: none
+         }
+ 
+         .mobileBottom{
+                 display: block;
+                 width:100%;
+                 position: fixed;
+                 z-index: 1;
+                 bottom: 0;
+                 
+             }
+ }

@@ -12,39 +12,15 @@ mat-grid-list{
     width: 100%  !important;
 } 
 
-.mobileBottom{
-
-    display: none;
-}
-.orderSummery{
-   width: 30%;
-   margin-left:auto; 
-   position: fixed;
-   top:90px;
-   right: 20px;
-}
 
 .mobileMarginBottom{
     padding-bottom:30px;
 }
+
 @media (max-width: 600px)
 {
     mat-grid-list{
             width: 90%;
             margin: auto;
         }
-
-        .orderSummery{
-           
-            display: none
-        }
-
-        .mobileBottom{
-                display: block;
-                width:100%;
-                position: fixed;
-                z-index: 1;
-                bottom: 0;
-                
-            }
 }

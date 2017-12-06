@@ -27,37 +27,5 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-  <div class="orderSummery" *ngIf="cartProducts.length>0"> 
-    <mat-card>
-      <h4 style="text-align:center">Order Summery</h4>
-
-      <table class="table">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let product of cartProducts">
-              <td>{{product.name}}</td>
-              <td>  {{product.selectedQty}}</td>
-              <td>&#8377; {{product.selectedQty * product.price}}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div style="margin-right:0px;float:right;display:flex">
-            <h4>Total</h4>
-            <h4 style="margin-left:16px;margin-right:16px;">&#8377;{{getTotalPrice()}}</h4>
-        </div>
-        <button routerLink="/payment" mat-raised-button color="primary" class="form-input"  style="width:100%;">Proceed to Checkout</button>
-        
-    </mat-card>
-  </div>
-
-  <div class="mobileBottom" *ngIf="cartProducts.length>0">
-    <button routerLink="/payment" mat-raised-button color="primary" class="form-input"  style="width:100%;">Proceed to Checkout</button>  
-  </div>
+  <order-summery [cart-products]="cartProducts"></order-summery>
 </div>

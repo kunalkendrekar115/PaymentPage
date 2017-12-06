@@ -27,5 +27,9 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-  <order-summery [cart-products]="cartProducts"></order-summery>
+  <order-summery class="orderSummery"  [cart-products]="cartProducts"></order-summery>
+
+  <div class="mobileBottom" *ngIf="cartProducts.length>0">
+    <button routerLink="/payment" mat-raised-button color="primary" class="form-input"  style="width:100%;">Proceed to Checkout</button>  
+  </div>
 </div>

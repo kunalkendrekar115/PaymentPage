@@ -1,6 +1,6 @@
-<mat-toolbar color="primary"></mat-toolbar>
+<mat-toolbar class="fixed-header" color="primary"></mat-toolbar>
 
-<div style="display:flex;width:100%;">
+<div style="display:flex;width:100%;position:relative;top:80px">
   <mat-grid-list cols={{col}} rowHeight="430px" (window:resize)="onResize($event)">
     <mat-grid-tile style="width:100%;" *ngFor="let product of products">
 

@@ -1,7 +1,7 @@
 mat-grid-list{
 
     width: 50%;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 
 .fixed-header {
@@ -27,15 +27,16 @@ mat-grid-list{
     padding-bottom:30px;
 }
 
+
+
 @media (max-width: 600px)
 {
     mat-grid-list{
-            width: 90%;
-            margin: auto;
+            width: 100%;
+            margin: 0px;
         }
 
-        .orderSummery{
-            
+        .orderSummery{      
              display: none
          }
  

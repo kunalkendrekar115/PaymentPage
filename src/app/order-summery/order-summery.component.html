@@ -1,7 +1,9 @@
-<mat-toolbar class="fixed-header" color="primary"></mat-toolbar>
+<mat-toolbar class="fixed-header" color="primary">
+  <span>Shopping Cart</span>
+</mat-toolbar>
 
 <div>
-<div *ngIf="cartProducts.length>0"> 
+<div style="padding:12px;"*ngIf="cartProducts.length>0"> 
   <mat-card>
     <h4 style="text-align:center">Order Summery</h4>
 

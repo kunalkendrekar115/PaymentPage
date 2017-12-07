@@ -51,6 +51,7 @@ import { OrderSummeryComponent } from './order-summery/order-summery.component';
 
     RouterModule.forRoot([
       {path: 'payment', component: PaymentComponent},
+      { path: 'ordersummery/:id', component: OrderSummeryComponent },
       { path: '', component: CartComponent }
     ])
   ],

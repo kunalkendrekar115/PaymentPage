@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from '../product';
+import { Router } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -14,8 +15,8 @@ export class CartComponent {
   products: Product[] = new Array();
   cartProducts: Product[] = new Array();
   col = 2;
-
-  constructor() {
+   
+  constructor(private router:Router) {
 
     this.products.push(new Product("Sandwhich", "100", "sandwich.jpg", "description"))
     this.products.push(new Product("Wrap", "120", "wrap.jpg", "description"))
@@ -67,4 +68,10 @@ export class CartComponent {
     console.log(JSON.stringify(this.cartProducts))
   }
 
+
+  redirect() {
+
+    localStorage.setItem('cart',JSON.stringify(this.cartProducts));
+    this.router.navigate(['/ordersummery',1])
+  }
 }

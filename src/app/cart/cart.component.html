@@ -30,6 +30,6 @@
   <order-summery class="orderSummery"  [cart-products]="cartProducts"></order-summery>
 
   <div class="mobileBottom" *ngIf="cartProducts.length>0">
-    <button routerLink="/payment" mat-raised-button color="primary" class="form-input"  style="width:100%;">Proceed to Checkout</button>  
+    <button mat-raised-button color="primary" class="form-input" style="width:100%;" (click)="redirect()">Proceed to Checkout</button>  
   </div>
 </div>

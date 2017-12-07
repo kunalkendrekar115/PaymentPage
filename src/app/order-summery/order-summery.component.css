@@ -1,0 +1,23 @@
+.fixed-header {
+   display: none;
+} 
+
+mat-card{
+    top: 0px;
+}
+@media (max-width: 600px)
+{
+    .fixed-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%  !important;
+       
+    }
+
+    mat-card{
+       top: 80px;
+    }
+}

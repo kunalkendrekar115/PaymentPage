@@ -1,6 +1,6 @@
 .root{
     display: flex;
-    top: 60px;
+    top: 80px;
     position: relative;
     left: 10%;
    
@@ -14,6 +14,14 @@ li{
     padding: 20px;
     
 }
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%  !important;
+} 
 
 .payment-options{
     width: 35%;
@@ -36,7 +44,7 @@ li{
     
     .root{
         display: block;
-        top: 0px;
+        top: 60px;
         position: relative;
         left: 0%;
         width: 100%;

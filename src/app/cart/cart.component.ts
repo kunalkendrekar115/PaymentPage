@@ -10,21 +10,32 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 // tslint:disable
-export class CartComponent {
+export class CartComponent implements OnInit {
 
   products: Product[] = new Array();
   cartProducts: Product[] = new Array();
   col = 2;
-   
-  constructor(private router:Router) {
+
+  constructor(private router: Router) {
 
     this.products.push(new Product("Sandwhich", "100", "sandwich.jpg", "description"))
     this.products.push(new Product("Wrap", "120", "wrap.jpg", "description"))
     this.products.push(new Product("Pizza", "300", "pizza.jpg", "description"))
     this.products.push(new Product("Ice Cream", "150", "icecream.jpg", "description"))
-
   }
 
+
+  ngOnInit() {
+
+    const element = window.screen.width;
+    console.log(element);
+
+    if (element < 750) {
+      this.col = 1;
+      console.log("Mobile width");
+    } else
+      this.col = 2;
+  }
 
   getImageURL(imageName) {
     return 'assets/images/' + imageName
@@ -71,7 +82,7 @@ export class CartComponent {
 
   redirect() {
 
-    localStorage.setItem('cart',JSON.stringify(this.cartProducts));
-    this.router.navigate(['/ordersummery',1])
+    localStorage.setItem('cart', JSON.stringify(this.cartProducts));
+    this.router.navigate(['/ordersummery', 1])
   }
 }
